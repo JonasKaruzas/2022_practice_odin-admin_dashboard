@@ -11,10 +11,11 @@ body {
 
 .wrapper {
   height: 100vh;
+  display: flex;
 }
 
 nav {
-  width: 200px;
+  width: 270px;
   height: 100%;
   background-color: #0ea5e9;
   color: $nav-white;
@@ -56,20 +57,125 @@ nav {
       }
     }
   }
+
+  .icon {
+    filter: invert(1);
+    height: 20px;
+    width: 20px;
+
+    &-big {
+      filter: invert(1);
+      height: 40px;
+      width: 40px;
+    }
+  }
 }
 
 .no-hover:hover {
   background-color: #0ea5e9;
 }
 
-.icon {
-  filter: invert(1);
-  height: 20px;
-  width: 20px;
+main {
+  width: 100%;
+}
 
-  &-big {
-    filter: invert(1);
-    height: 40px;
-    width: 40px;
+header {
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    form {
+      display: flex;
+      gap: 10px;
+      flex: 1;
+
+      input {
+        border: none;
+        border-radius: 10px;
+        background-color: #e2e8f0;
+        padding: 5px;
+        width: 70%;
+      }
+    }
+
+    .user-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    .icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    .user-photo {
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+    }
+  }
+
+  .bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .greeting {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      img {
+        height: 70px;
+        width: 70px;
+        border-radius: 40px;
+        grid-row-start: span 2;
+        margin-right: 10px;
+      }
+
+      span:nth-of-type(1) {
+        font-size: 12px;
+        font-weight: 700;
+        align-self: flex-end;
+        margin-bottom: 10px;
+      }
+      span:nth-of-type(2) {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+
+      button {
+        border: none;
+        border-radius: 20px;
+        padding: 8px 20px;
+        color: $nav-white;
+        background-color: #0ea5e9;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #0284c7;
+        }
+      }
+    }
   }
 }
