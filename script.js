@@ -1,1 +1,1 @@
-// Time to script!
+console.log("works");
