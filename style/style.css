@@ -6,6 +6,7 @@ body {
 .wrapper {
   height: 100vh;
   display: flex;
+  background-color: #e2e8f0;
 }
 
 nav {
@@ -71,6 +72,7 @@ header {
   padding-left: 30px;
   padding-right: 40px;
   padding-bottom: 15px;
+  background-color: #ffffff;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 header .top {
@@ -149,4 +151,60 @@ header .bottom .buttons button {
 header .bottom .buttons button:hover {
   cursor: pointer;
   background-color: #0284c7;
+}
+
+section {
+  padding: 20px;
+  display: flex;
+}
+section .projects-container .title {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+section .projects-container .project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+section .projects-container .project-cards .card {
+  position: relative;
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 150px;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow: hidden;
+}
+section .projects-container .project-cards .card__title {
+  font-size: 12px;
+  font-weight: 700;
+}
+section .projects-container .project-cards .card__text {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+section .projects-container .project-cards .card .links {
+  display: flex;
+  gap: 15px;
+  align-self: flex-end;
+}
+section .projects-container .project-cards .card .links a img {
+  height: 20px;
+  width: 20px;
+}
+section .projects-container .project-cards .card::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 8px;
+  height: 100%;
+  content: "";
+  background-color: #fb923c;
 }/*# sourceMappingURL=style.css.map */
